@@ -1,0 +1,28 @@
+
+.banner-aula{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(../img/equipo02.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+}
+.cont-banneraula{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+p{
+    font-size: 20px;
+    line-height: 30px;
+    background: rgb(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+
