@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+body{
+    width: 100%;
+    margin: auto;
+    background: white;
+    overflow-x: hidden; /* Elimina cualquier desbordamiento horizontal */
+}
+
+
+/* Estilo para el contenedor de la frase */
+.carousel-caption {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 90%;  /* Limita el ancho máximo de la frase */
+    word-wrap: break-word;  /* Para evitar que las frases largas se desborden */
+    box-sizing: border-box;  /* Para que el padding no afecte al tamaño */
+}
+
+/* Asegurarse de que las imágenes y el carrusel ocupen toda la pantalla */
+.carousel-item {
+    position: relative;  /* Necesario para posicionar la frase dentro de la imagen */
+    min-width: 100%;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-inner {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.carousel-item.active {
+    opacity: 1;
+    display: block;
+}
+
+
+.carousel-control {
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+
+.cabecera{
+    position: fixed;
+    width: 100%;
+    z-index: 1000000;
+}
+
+#container{
+    width: 100%;
+
+}
+
+#container a{
+    text-decoration: none;
+    
+}
+#container h1{
+    color: white;
+    font-size: 150%;
+    background: rgb(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px 0;
+    
+} 
+
+nav{
+    text-align: center;
+    background:rgb(0, 0, 0, 0.5);
+    width:100%;
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+}
+
+nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 250px;  
+}
+nav a{
+    text-decoration: none;
+    color:white;
+    padding: 10px 20px;
+    display: block;
+}
+nav a:hover{
+    background: rgb(0, 0, 0, 0.5);
+    color: yellow;
+    transform: scale(1.1);
+    text-transform: var(1.1);
+    transition: 0.5s;
+  
+}
+nav li li{
+    display:flex;
+}
+nav ul ul{
+    display: none;
+}
+
+nav ul li:hover ul{
+  display:block;
+  background: rgb(0, 0, 0, 0.5);
+
+}
+
+p{
+    font-size: 20px;
+    line-height: 30px;
+    background: rgb(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+
+section{
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+.servicios {
+    width: 300px;
+    height: 250px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+.servicios img{
+width: 150px ;
+height: 150px ;
+padding-top: 20px;
+padding-left: 40px;
+box-shadow: 10px 10px 10px black;
+border-radius: 20px;
+background: rgba(5, 145, 163, 0.733);
+
+}
+
+.servicios img:hover{
+    transform: scale(1.3)  ; 
+    transition: 0.5s;
+    background: rgba(5, 145, 163, 0.733);
+   
+    
+}
+.servicios h2{
+    color:black;
+    font-family: tahoma;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+
+.fondo-footer{
+    background: black;
+    padding: 20px 0px;
+}
+
+.footer{
+    width: 50%;
+    margin: auto;
+
+}
+.footer p{
+    color: white;
+    font-size: 120%;
+    text-align: center;
+}
+footer img{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+#menu,#close{
+    font-size:30px ;
+    color: white;
+    float: right;
+    line-height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+@media only screen and (max-width:980px){
+
+    .container,.cont-banner, main, section,aside{
+        width: 100%;
+    }
+
+.fondo-contactos{
+    padding: 50px 0px;
+}
+
+.text-contactos{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#contactos{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact{
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+.contact h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.listas li{
+    list-style-image: url(../img/buena.png);
+    margin-bottom: 10px;
+}
+
+}
+
+/* Mediaqueris para celular */
+
+@media only screen and (max-width:780px){
+
+    .container,.cont-banner, main, section,aside{
+        width: 100%;
+        text-align: center;
+    }
+    nav{
+        width:100% ;
+        height: 100%;
+        margin-top: 30px;
+        position: fixed;
+        left:60px ;
+        background: rgb(12, 160, 183);
+        right: -200%;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255,255,255, 0.3);
+
+    }
+    nav a:hover{
+        background: rgba(15, 132, 164, 0.5);
+        color: black;
+        transform: scale(1.1);
+        text-transform: var(1.1);
+        transition: 0.5s;
+}
+    nav ul li:hover ul{
+    display:block;
+    background: rgba(15, 132, 164);
+}
+
+    .carousel-caption {
+        display: none;
+    }
+
+    .carousel-item{
+        width: 100%; /* La imagen se ajusta al ancho del carrusel */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+#check:checked ~ nav{
+    right:0%;
+}
+
+#menu {
+    position: absolute; /* Posición absoluta dentro de la cabecera */
+    top: 10px;
+    right: 10px;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    width: 40px; /* Ajusta el tamaño del botón */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+}

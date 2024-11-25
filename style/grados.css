@@ -1,0 +1,87 @@
+.banner-grados{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(../img/equipo02.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+}
+
+.cont-bannergrados{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.cont-bannergrados p{
+    font-size: 100px;
+    line-height: 100px;
+    background: rgb(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+
+
+.banner-aula{
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap:wrap ;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+.libros {
+    width: 300px;
+    height: 350px;
+    padding: 50px;
+    margin-bottom: 100px;
+}
+.libros img{
+width: 200px ;
+height: 200px ;
+padding-top: 20px;
+padding-left: 40px;
+box-shadow: 10px 10px 10px black;
+border-radius: 15px;
+
+}
+
+.libros img:hover{
+    transform: rotate(10deg)  ; 
+    transition: 0.5s;
+   
+    
+}
+.libros h2{
+    color: black;
+    font-family: tahoma;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+/* Mediaqueris para celular */
+@media only screen and (max-width:780px){
+    .banner-biblioteca {
+        background-image: url(../img/equipo02.jpg); /* Reemplaza con tu imagen */
+        background-attachment: scroll; /* Evita problemas con 'fixed' en móviles */
+        background-size: cover; /* La imagen cubre todo el ancho del contenedor */
+        background-position: top center; /* Pegada arriba y centrada horizontalmente */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+        height: auto; /* Permite que la altura sea dinámica */
+        min-height: 500px; /* Establece una altura mínima */
+    }
+
+    .cont-biblioteca {
+        display: none; /* Oculta la frase en pantallas pequeñas */
+    }
+}

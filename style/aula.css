@@ -1,0 +1,46 @@
+
+.banner-aula{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(../img/equipo02.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+}
+.cont-banneraula{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+p{
+    font-size: 20px;
+    line-height: 30px;
+    background: rgb(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+
+/* Mediaqueris para celular */
+
+@media only screen and (max-width:780px){
+    .banner-aula {
+        background-image: url(../img/equipo02.jpg); /* Reemplaza con tu imagen */
+        background-attachment: scroll; /* Evita problemas con 'fixed' en móviles */
+        background-size: cover; /* La imagen cubre todo el ancho del contenedor */
+        background-position: top center; /* Pegada arriba y centrada horizontalmente */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+        height: auto; /* Permite que la altura sea dinámica */
+        min-height: 500px; /* Establece una altura mínima */
+    }
+    
+    .cont-banneraula{
+        display: none; /* Oculta la frase en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+body{
+    width: 100%;
+    margin: auto;
+    background: white;
+}
+
+.cabecera{
+    position: fixed;
+    width: 100%;
+    z-index: 1000000;
+}
+
+#container{
+    width: 100%;
+
+}
+
+#container a{
+    text-decoration: none;
+    
+}
+#container p{
+    color: white;
+    font-size: 150%;
+    background: rgb(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px 0;
+    
+} 
+
+nav{
+    text-align: center;
+    background:rgb(0, 0, 0, 0.5);
+    width:100%;
+    margin: auto;
+}
+
+ul{
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+}
+
+nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 250px;
+  
+}
+nav a{
+    text-decoration: none;
+    color:white;
+    padding: 10px 20px;
+    display: block;
+}
+nav a:hover{
+    background: rgb(0, 0, 0, 0.5);
+    color: yellow;
+    transform: scale(1.1);
+    text-transform: var(1.1);
+    transition: 0.5s;
+  
+}
+nav li li{
+    display:flex;
+}
+nav ul ul{
+    display: none;
+}
+
+nav ul li:hover ul{
+  display:block;
+  background: rgb(0, 0, 0, 0.5);
+
+}
+
+.banner{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(../img/compu03.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    margin: auto;
+
+
+}
+
+.cont-banner{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.cont-banner h2{
+    margin-bottom: 10px;
+    background: rgb(0, 0, 0, 0.5);
+    padding: 20px 0px;
+    margin-bottom: 0;
+}
+p{
+    font-size: 20px;
+    line-height: 30px;
+    background: rgb(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+
+@media only screen and (max-width:980px){
+
+    .container,.cont-banner, main, section,aside{
+        width: 90%;
+    }
+
+}
+
+.fondo-contactos{
+    padding: 50px 0px;
+}
+
+.text-contactos{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#contactos{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact{
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+.contact h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.listas li{
+    list-style-image: url(../img/buena.png);
+    margin-bottom: 10px;
+}
+
+
+/* Mediaqueris para celular */
+
+@media only screen and (max-width:790px){
+
+    .container,.cont-banner, main, section,aside{
+        width: 98%;
+        text-align: center;
+    }
+    nav{
+        width:100% ;
+        height: 100%;
+        margin-top: 30px;
+        position: fixed;
+        left:60px ;
+        background: rgb(12, 160, 183);
+        right: -200%;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255,255,255, 0.3);
+
+    }
+    nav a:hover{
+        background: rgba(15, 132, 164, 0.5);
+        color: black;
+        transform: scale(1.1);
+        text-transform: var(1.1);
+        transition: 0.5s;
+}
+    nav ul li:hover ul{
+    display:block;
+    background: rgba(15, 132, 164);
+}
+#check:checked ~ nav{
+    right:0%;
+}
+.banner {
+    background-image: url(../img/compu03.jpg); /* Reemplaza con tu imagen */
+    background-attachment: scroll; /* Evita problemas con 'fixed' en móviles */
+    background-size: cover; /* La imagen cubre todo el ancho del contenedor */
+    background-position: top center; /* Pegada arriba y centrada horizontalmente */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    height: auto; /* Permite que la altura sea dinámica */
+    min-height: 500px; /* Establece una altura mínima */
+}
+
+.cont-banner {
+    display: none; /* Oculta la frase en pantallas pequeñas */
+}
+
+}

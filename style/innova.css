@@ -1,0 +1,133 @@
+
+/* El resto de los estilos de .innova */
+.innova{
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.artinnova {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.artinnova img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    padding-top: 20px;
+    padding-left: 0;
+    box-shadow: 10px 10px 10px black;
+}
+
+.artinnova img:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+}
+
+.artinnova h3 {
+    color: black;
+    font-family: tahoma;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+/* Estilo para el contenedor de la frase */
+.carousel-caption {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 90%;  /* Limita el ancho máximo de la frase */
+    word-wrap: break-word;  /* Para evitar que las frases largas se desborden */
+    box-sizing: border-box;  /* Para que el padding no afecte al tamaño */
+}
+
+/* Responsividad */
+@media only screen and (max-width:980px) {
+    .container, .cont-banner, main, section, aside {
+        width: 100%;
+    }
+
+    .fondo-contactos {
+        padding: 50px 0px;
+    }
+
+    .text-contactos {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #contactos {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .contact {
+        width: 350px;
+        margin-bottom: 10px;
+    }
+
+    .contact h3 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .listas li {
+        list-style-image: url(../img/buena.png);
+        margin-bottom: 10px;
+    }
+
+    .artinnova {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .artinnova img {
+        width: 100%;
+        height: auto;
+    }
+
+    .innova {
+        width: 100%;
+        padding: 20px;
+    }
+    .carousel-caption {
+        display: none;
+    }
+
+    .carousel-item{
+        width: 100%; /* La imagen se ajusta al ancho del carrusel */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+    #menu {
+        position: absolute; /* Posición absoluta dentro de la cabecera */
+        top: 10px;
+        right: 10px;
+        z-index: 1000; /* Asegura que esté encima de otros elementos */
+        width: 40px; /* Ajusta el tamaño del botón */
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    }

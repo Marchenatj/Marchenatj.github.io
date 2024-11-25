@@ -1,0 +1,52 @@
+
+
+.fondo-aside{
+    background: hsl(231, 90%, 59%);
+padding: 25PX 25PX;
+}
+
+.asides{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+aside{
+    width: 320px;
+    position: relative;
+    transition: 0.5s ease-out;
+    overflow: hidden;
+
+}
+.cont-aside{
+    position: absolute;
+    transform: translateX(-100%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+    transition: 0.5s ease-out;
+}
+aside:hover .cont-aside{
+    transform: translateX(0%);
+}
+.img-aside{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* Mediaqueris para celular */
+
+@media only screen and (max-width:790px){
+  
+
+    aside{
+        margin-top: 20px};
+}
